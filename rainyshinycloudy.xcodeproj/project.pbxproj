@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		B47D44C21D8B1FD500048CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D44C11D8B1FD500048CC3 /* AppDelegate.swift */; };
-		B47D44C41D8B1FD500048CC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D44C31D8B1FD500048CC3 /* ViewController.swift */; };
+		B47D44C41D8B1FD500048CC3 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D44C31D8B1FD500048CC3 /* WeatherVC.swift */; };
 		B47D44C71D8B1FD500048CC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47D44C51D8B1FD500048CC3 /* Main.storyboard */; };
 		B47D44C91D8B1FD500048CC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47D44C81D8B1FD500048CC3 /* Assets.xcassets */; };
 		B47D44CC1D8B1FD500048CC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47D44CA1D8B1FD500048CC3 /* LaunchScreen.storyboard */; };
 		B47D44D71D8B1FD500048CC3 /* rainyshinycloudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D44D61D8B1FD500048CC3 /* rainyshinycloudyTests.swift */; };
 		B47D44E21D8B1FD500048CC3 /* rainyshinycloudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D44E11D8B1FD500048CC3 /* rainyshinycloudyUITests.swift */; };
+		B4F677281D8BC225001B94EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F677271D8BC225001B94EF /* Constants.swift */; };
+		B4F6772A1D8BC45C001B94EF /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F677291D8BC45C001B94EF /* CurrentWeather.swift */; };
+		B4F6772F1D8BDED8001B94EF /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6772E1D8BDED8001B94EF /* Forecast.swift */; };
+		B4F677311D8BFAC3001B94EF /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F677301D8BFAC3001B94EF /* WeatherCell.swift */; };
+		B4F677331D8C035B001B94EF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F677321D8C035B001B94EF /* Location.swift */; };
+		B4F677411D8C119F001B94EF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47D44FB1D8B216A00048CC3 /* Alamofire.framework */; };
+		B4F677421D8C119F001B94EF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B47D44FB1D8B216A00048CC3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,12 +38,82 @@
 			remoteGlobalIDString = B47D44BD1D8B1FD400048CC3;
 			remoteInfo = rainyshinycloudy;
 		};
+		B47D44FA1D8B216A00048CC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		B47D44FC1D8B216A00048CC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		B47D44FE1D8B216A00048CC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		B47D45001D8B216A00048CC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		B47D45021D8B216A00048CC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		B47D45041D8B216A00048CC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		B47D45061D8B216A00048CC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		B4F677431D8C119F001B94EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B4F677451D8C11A0001B94EF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B4F677421D8C119F001B94EF /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B47D44BE1D8B1FD500048CC3 /* rainyshinycloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rainyshinycloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47D44C11D8B1FD500048CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B47D44C31D8B1FD500048CC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B47D44C31D8B1FD500048CC3 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		B47D44C61D8B1FD500048CC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B47D44C81D8B1FD500048CC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B47D44CB1D8B1FD500048CC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +124,12 @@
 		B47D44DD1D8B1FD500048CC3 /* rainyshinycloudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rainyshinycloudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47D44E11D8B1FD500048CC3 /* rainyshinycloudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rainyshinycloudyUITests.swift; sourceTree = "<group>"; };
 		B47D44E31D8B1FD500048CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		B4F677271D8BC225001B94EF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B4F677291D8BC45C001B94EF /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		B4F6772E1D8BDED8001B94EF /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		B4F677301D8BFAC3001B94EF /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		B4F677321D8C035B001B94EF /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F677411D8C119F001B94EF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +165,7 @@
 				B47D44D51D8B1FD500048CC3 /* rainyshinycloudyTests */,
 				B47D44E01D8B1FD500048CC3 /* rainyshinycloudyUITests */,
 				B47D44BF1D8B1FD500048CC3 /* Products */,
+				B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +182,10 @@
 		B47D44C01D8B1FD500048CC3 /* rainyshinycloudy */ = {
 			isa = PBXGroup;
 			children = (
+				B4F6772D1D8BD05D001B94EF /* Controller */,
+				B4F6772C1D8BD059001B94EF /* View */,
+				B4F6772B1D8BD053001B94EF /* Model */,
 				B47D44C11D8B1FD500048CC3 /* AppDelegate.swift */,
-				B47D44C31D8B1FD500048CC3 /* ViewController.swift */,
 				B47D44C51D8B1FD500048CC3 /* Main.storyboard */,
 				B47D44C81D8B1FD500048CC3 /* Assets.xcassets */,
 				B47D44CA1D8B1FD500048CC3 /* LaunchScreen.storyboard */,
@@ -125,6 +212,47 @@
 			path = rainyshinycloudyUITests;
 			sourceTree = "<group>";
 		};
+		B47D44F01D8B216A00048CC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B47D44FB1D8B216A00048CC3 /* Alamofire.framework */,
+				B47D44FD1D8B216A00048CC3 /* Alamofire iOS Tests.xctest */,
+				B47D44FF1D8B216A00048CC3 /* Alamofire.framework */,
+				B47D45011D8B216A00048CC3 /* Alamofire OSX Tests.xctest */,
+				B47D45031D8B216A00048CC3 /* Alamofire.framework */,
+				B47D45051D8B216A00048CC3 /* Alamofire tvOS Tests.xctest */,
+				B47D45071D8B216A00048CC3 /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4F6772B1D8BD053001B94EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4F677321D8C035B001B94EF /* Location.swift */,
+				B4F677271D8BC225001B94EF /* Constants.swift */,
+				B4F677291D8BC45C001B94EF /* CurrentWeather.swift */,
+				B4F6772E1D8BDED8001B94EF /* Forecast.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B4F6772C1D8BD059001B94EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4F677301D8BFAC3001B94EF /* WeatherCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B4F6772D1D8BD05D001B94EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B47D44C31D8B1FD500048CC3 /* WeatherVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +263,12 @@
 				B47D44BA1D8B1FD400048CC3 /* Sources */,
 				B47D44BB1D8B1FD400048CC3 /* Frameworks */,
 				B47D44BC1D8B1FD400048CC3 /* Resources */,
+				B4F677451D8C11A0001B94EF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B4F677441D8C119F001B94EF /* PBXTargetDependency */,
 			);
 			name = rainyshinycloudy;
 			productName = rainyshinycloudy;
@@ -221,6 +351,12 @@
 			mainGroup = B47D44B51D8B1FD400048CC3;
 			productRefGroup = B47D44BF1D8B1FD500048CC3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B47D44F01D8B216A00048CC3 /* Products */;
+					ProjectRef = B47D44EF1D8B216A00048CC3 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B47D44BD1D8B1FD400048CC3 /* rainyshinycloudy */,
@@ -229,6 +365,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B47D44FB1D8B216A00048CC3 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B47D44FA1D8B216A00048CC3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B47D44FD1D8B216A00048CC3 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = B47D44FC1D8B216A00048CC3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B47D44FF1D8B216A00048CC3 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B47D44FE1D8B216A00048CC3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B47D45011D8B216A00048CC3 /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = B47D45001D8B216A00048CC3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B47D45031D8B216A00048CC3 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B47D45021D8B216A00048CC3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B47D45051D8B216A00048CC3 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = B47D45041D8B216A00048CC3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B47D45071D8B216A00048CC3 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B47D45061D8B216A00048CC3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B47D44BC1D8B1FD400048CC3 /* Resources */ = {
@@ -262,8 +450,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B47D44C41D8B1FD500048CC3 /* ViewController.swift in Sources */,
+				B47D44C41D8B1FD500048CC3 /* WeatherVC.swift in Sources */,
 				B47D44C21D8B1FD500048CC3 /* AppDelegate.swift in Sources */,
+				B4F677311D8BFAC3001B94EF /* WeatherCell.swift in Sources */,
+				B4F6772A1D8BC45C001B94EF /* CurrentWeather.swift in Sources */,
+				B4F677281D8BC225001B94EF /* Constants.swift in Sources */,
+				B4F6772F1D8BDED8001B94EF /* Forecast.swift in Sources */,
+				B4F677331D8C035B001B94EF /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +488,11 @@
 			isa = PBXTargetDependency;
 			target = B47D44BD1D8B1FD400048CC3 /* rainyshinycloudy */;
 			targetProxy = B47D44DE1D8B1FD500048CC3 /* PBXContainerItemProxy */;
+		};
+		B4F677441D8C119F001B94EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = B4F677431D8C119F001B94EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -412,6 +610,7 @@
 		B47D44E71D8B1FD600048CC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8VB699JS95;
 				INFOPLIST_FILE = rainyshinycloudy/Info.plist;
@@ -425,6 +624,7 @@
 		B47D44E81D8B1FD600048CC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8VB699JS95;
 				INFOPLIST_FILE = rainyshinycloudy/Info.plist;
@@ -512,6 +712,7 @@
 				B47D44E81D8B1FD600048CC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B47D44E91D8B1FD600048CC3 /* Build configuration list for PBXNativeTarget "rainyshinycloudyTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +721,7 @@
 				B47D44EB1D8B1FD600048CC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B47D44EC1D8B1FD600048CC3 /* Build configuration list for PBXNativeTarget "rainyshinycloudyUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +730,7 @@
 				B47D44EE1D8B1FD600048CC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
